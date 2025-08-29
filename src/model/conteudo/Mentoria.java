@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 /**
  * Representa uma mentoria dentro do Bootcamp.
- * Cada mentoria possui tículo, descrição e uma data de realiazação
+ * Cada mentoria possui título, descrição e uma data de realiazação.
  */
 public class Mentoria extends Conteudo {
 
@@ -33,7 +33,7 @@ public class Mentoria extends Conteudo {
      * @param data data da mentoria
      * @throws ConteudoException se a data for nula ou anterior à data atual
      */
-    private void setData(LocalDate data) {
+    public void setData(LocalDate data) {
         if (data == null || data.isBefore(LocalDate.now())) {
             throw new ConteudoException("A data da mentoria deve ser hoje ou futura.");
         }
